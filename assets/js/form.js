@@ -6,10 +6,7 @@ const contentInput = document.querySelector('#content');
 const submitBtn = document.querySelector('#submit');
 const pEl = document.querySelector('#error');
 
-// let formDataList = [];
-
 // TODO:  Create a function that handles the form submission. Grab the form data and store it in local storage, then redirect to the blog page using the redirectPage function. If the form is submitted with missing data, display an error message to the user.
-
 function handleFormSubmit(event) {
   event.preventDefault();
   
@@ -22,16 +19,17 @@ function handleFormSubmit(event) {
   if (formData.Username==='' || formData.Title==='' || formData.Content==='') {
     pEl.textContent = 'Please fill all blanks.';
   } else {
-localStorage.setItem('form-data', JSON.stringify(formData));
+    let formDataList = JSON.parse(localStorage.getItem('form-data-list')) || [];
+    formDataList.push(formData);
+    localStorage.setItem('form-data-list', JSON.stringify(formDataList));
 
-    // formDataList.push(formData);
-    // usernameInput = '';
-    // titleInput = '';
-    // contentInput = '';
+    usernameInput = '';
+    titleInput = '';
+    contentInput = '';
+    
     redirectPage('https://zoooe-brooo.github.io/module-4-challenge-personal-blog/blog.html');
   }
 }
-
   
 let redirectURL = '';
 

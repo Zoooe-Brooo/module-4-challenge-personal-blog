@@ -27,7 +27,7 @@ function emptyBlog() {
 
 // TODO: Create a function that reads from local storage and returns the data
 function renderBlogList() {
-    const formData = JSON.parse(localStorage.getItem('form-data'));
+    const formData = JSON.parse(localStorage.getItem('form-data-list'));
 
     if (formData && formData.Title && formData.Content && formData.Username) {
         addBlogPost(formData.Title, formData.Content, formData.Username);
