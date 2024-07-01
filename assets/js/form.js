@@ -24,9 +24,10 @@ function handleFormSubmit(event) {
     formDataList.push(formData);
     localStorage.setItem('form-data-list', JSON.stringify(formDataList));
     
-    usernameInput = '';
-    titleInput = '';
-    contentInput = '';
+    usernameInput.textContent = '';
+    titleInput.textContent = '';
+    contentInput.textContent = '';
+    pEl.textContent = '';
 
     redirectPage('https://zoooe-brooo.github.io/module-4-challenge-personal-blog/blog.html');
   }
