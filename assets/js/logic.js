@@ -30,5 +30,3 @@ function changeStyle(){
 }
 
 toggleEl.addEventListener('click', changeStyle)
-
-

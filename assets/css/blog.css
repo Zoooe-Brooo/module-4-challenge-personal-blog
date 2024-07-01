@@ -50,7 +50,7 @@ main {
   flex-direction: column;
   gap: 1em;
   padding: 1rem;
-  height: calc(100vh - 11rem);
+  height: calc(100vh - 16rem);
   overflow-y: scroll;
   justify-content: flex-start;
 }

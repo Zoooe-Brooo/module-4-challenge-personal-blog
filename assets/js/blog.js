@@ -27,11 +27,13 @@ function emptyBlog() {
 
 // TODO: Create a function that reads from local storage and returns the data
 function renderBlogList() {
-    const formData = JSON.parse(localStorage.getItem('form-data-list'));
-
-    if (formData && formData.Title && formData.Content && formData.Username) {
-        addBlogPost(formData.Title, formData.Content, formData.Username);
-    } else {
+    const formDataList = JSON.parse(localStorage.getItem('form-data-list')) || [];
+    
+    if (formDataList.length > 0) {
+        formDataList.forEach(post => {
+            addBlogPost(post.Title, post.Content, post.Username);
+        });
+    }  else {
         emptyBlog();
     } 
 };
