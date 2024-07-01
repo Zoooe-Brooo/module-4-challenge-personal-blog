@@ -5,13 +5,19 @@
 /*
   Tags
 */
+header {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:flex-end;
+}
+
 aside {
   background: linear-gradient(
     var(--light-accent), 
     var(--circle-color), 
     var(--dark-accent)
   );
-  clip-path: circle(20rem at center);
+  clip-path: circle(12rem at center);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,7 +29,7 @@ section {
 }
 
 aside > h2 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   color: white;
   text-shadow: 1px 1px 1px var(--dark-accent);
 }
@@ -95,5 +101,5 @@ section {
   color: var(--error);
   opacity: .75;
   position: absolute;
-  bottom: -2rem;
+  bottom: 2rem;
 }

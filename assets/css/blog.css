@@ -38,11 +38,12 @@ article p {
 footer {
   position: fixed;
   inset: 0;
-  top: calc(100% - 5rem);
+  top: calc(100% - 10rem);
 }
 
 li {
   margin: 1rem;
+  font-style: italic;
 }
 
 main {
@@ -56,6 +57,7 @@ main {
 
 ul {
   list-style: none;
+  line-height:0.5;
 }
 
 /*
